@@ -1,0 +1,345 @@
+/* $Id:$ */
+/* 
+    Document   : menless.less
+    Created on : Dec 20, 2010, 11:05:27 PM
+    Author     : fields
+    Description:
+        LESS Preprocess file. Creates men.css.
+        This file was created with: menless.less using lessphp
+*/
+
+
+/* Page Layout
+-------------------------------------------------------------- */
+@page_width = 98%;
+#header {  
+  width: @page_width;
+}
+#menu {
+  width: @page_width;
+}
+#wrapper {
+  width: @page_width;
+}
+#preface-wrapper {
+  width: @page_width;
+}
+#footer-wrapper {
+  width: @page_width;
+}
+#footer {
+  width: @page_width;
+}
+#bottom-wrapper {
+  width: @page_width;
+}
+#bottom-teaser {
+  width: @page_width;
+}
+
+@layout_width = 26+69; /* 97% */
+#layout-type-1 {  
+  #sidebar-left {
+    width: 20%;
+  }
+  #content {
+    width: 77%;
+  }
+}
+
+/* Admin Menu
+-------------------------------------------------------------- */
+#admin-menu {
+ font: 0.8em "Lucida Grande",Verdana,sans-serif;
+ .admin-menu-toolbar-category a {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+/* DHTML Menu
+-------------------------------------------------------------- */
+.dhtml-menu {
+  .dhtml-menu-icon {
+    left: -24px !important;
+  }
+  .dhtml-menu-icon:hover {
+    border-bottom: 2px ridge #005A8C;
+  }
+}
+
+/* Header regions
+-------------------------------------------------------------- */
+/* Breadcrumbs */
+.breadcrumb {
+  a {
+    font-family: 	"Lucida Grande","Lucida Sans Unicode",sans-serif;
+    font-size: 0.846em;
+  }
+}
+/* Primary Links */
+ul.primary li a {
+  font-size: 11px;
+  letter-spacing: 0.1px;
+  margin-right: 0.2em;
+}
+
+/* Login Block
+--------------------------------------------------------------*/
+.block-user {
+  #user-login-form { text-align: left; }
+  #edit-actions { 
+    text-align: center; 
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;    
+  }
+  .form {
+    text-align: left;
+  }
+  .form-item {    
+    clear: both;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    label {
+      float: left;
+      width: 8em;
+    }
+    .form-actions {
+    }
+  }
+  .item-list {
+    font-size: 97%;
+    ul li {
+      margin-top: 0em;
+      margin-bottom: 0em;
+    }
+  }
+}
+
+/* CKEditor
+--------------------------------------------------------------*/
+.cke_dialog_contents {
+  .cke_dialog_ui_checkbox {
+    label {
+      display: inline;    /* Fix checkboxes so chkbox is on same line as label text */
+    }
+  }
+}
+
+/* Vertical Tabs 
+--------------------------------------------------------------*/
+.vertical-tabs {
+  a {
+    font-family: 	"Lucida Grande","Lucida Sans Unicode",sans-serif;
+    font-size: 12px;
+  }
+  .text-format-wrapper {
+    fieldset.filter-wrapper {
+      margin-bottom: 3px;
+    }
+    .form-item {
+      margin-top: 0.4em;
+    }
+  }
+  .summary {
+    font-weight: normal;
+  }
+}
+
+.gst-description-top {
+  .vertical-tabs {
+    .description.top {
+      color: #234600;
+      font-family: Verdana,Arial,Helvetica,sans-serif;
+      font-size: 11.4167px;
+      background-color: #f8fff0;      
+      border: 1px solid #BBEE77;
+      padding: 2px 4px;
+      margin-bottom: 2px;
+      width: 100%;
+    }
+    .text-format-wrapper .description.bottom {
+      display: none;
+    }  
+  }
+}
+
+
+/* Reftagger (tooltips)
+-------------------------------------------------------------- */
+.lbsTooltip {
+  @mt=0.25em;
+  @ml=0.5em;
+  @mr=0.5em;
+  .lbsContainer {
+    background-color: wheat !important;
+    font-size: 85% !important;
+    line-height: 1.3em !important;
+  }
+  .lbsTooltipHeader {    
+    margin-left: @ml - 0.25;
+    margin-right: @mr;
+  }
+  .lbsTooltipBody {
+    margin-left: @ml;
+    margin-right: @mr;    
+    p {
+      margin-top: 0.15em;
+      margin-bottom: 0.15em;
+    }
+  }
+  .lbsTooltipFooter {
+    margin-left: @ml - 0.25;
+    margin-right: @mr;    
+  }
+}
+
+
+/* AJAX
+-------------------------------------------------------------- */
+.ajax-progress {
+  background: none repeat scroll 0 0 white;
+  position: relative;
+}
+
+/* JQuery-UI
+-------------------------------------------------------------- */
+.ui-widget {
+  font-size: 89% !important;
+  font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif !important;
+}
+
+/* Organic Groups
+-------------------------------------------------------------- */
+select.group-audience {
+  height: 9em;
+}
+
+
+/* Views
+-------------------------------------------------------------- */
+.view {
+  .view-content {
+    .views-table {
+      .views-field {
+        p { margin-top: 0; margin-bottom: 0; }
+      }
+    }
+  }
+}
+
+/* views-panes */
+.views-pane-upcoming-events,
+.views-pane-previous-events {
+  thead th { text-align: center; }
+  tbody tr { vertical-align: top; }
+}
+
+.views-pane-upcoming-events {
+  .views-row-first td {
+    border: 1px solid #005A8C;
+  }
+}
+
+/* Panels
+-------------------------------------------------------------- */
+.pane-content {
+  .field-label-inline {
+    margin-top: 0.25em;
+  }
+  .field-label-above {
+    margin-top: 0.5em;
+    
+    .field-items {
+      margin-left: 2em;
+    }
+  }
+
+  .field-items {    
+    .field-item {
+      p { margin-top: 0; margin-bottom: 0; }
+    }
+  }
+}
+
+
+/* Blocks
+-------------------------------------------------------------- */
+#block-views-subgroup-list-block {
+  .view-content {
+    caption {
+      text-align: left;
+      font-weight: bold;
+    }
+  }
+}
+.block {
+  tr.has-zebra.odd {
+    background-color: #F4F4F4;
+  }
+  tr.has-zebra.even {
+    background-color: #FCFCFC;
+  }
+}
+
+/* Node Edit Forms
+-------------------------------------------------------------- */
+
+form.node-form {  
+  input { 
+    font-size: 13.333px; 
+  }
+  input.hidden { display: none; }
+  textarea { font-size: 13px; }
+  select { font-size: 13px; }
+  input, textarea, select {
+    font-family: 	"Helvetica Neue",Helvetica,Arial,sans-serif;
+  }  
+}
+
+.filter-wrapper {
+  font-size: 80%;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  margin-bottom: 3px;
+  .tips {
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    font-size: 1.0em;
+    li {
+      padding-bottom: 0em;
+      list-style: disc;
+    }
+  }
+  select { font-size: 110%; font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif; }
+  .fieldset-wrapper {
+    margin-bottom: -0.5em;
+  }
+}
+
+.field-type-field-collection {
+  font-size: 85%;
+  th.field-label label { 
+    padding-left: 0.5em;
+  }
+  .field-type-node-reference {
+    label { display: none; }    /* Hide Labels in node-refs */  
+  }
+  input, select {
+    font-size: 115%;
+  } 
+}
+
+/* GSTCOURSE
+-------------------------------------------------------------- */
+.node-gstcourse-form {
+  .form-item-title {
+    float: left;
+  }
+  #edit-field-c-shname {
+    float: left;
+    margin-left: 1em;
+  }
+  #edit-field-c-description {
+    clear: both;
+  }
+}
